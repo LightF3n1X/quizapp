@@ -4,8 +4,28 @@
   padding: 0;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
-  word-spacing: 100px;
   white-space: nowrap;
+  word-spacing: 100px;
+}
+
+.center {
+  display: flex; /* Встановлюємо flex-контейнер */
+  flex-direction: column; /* Задаємо колонкову орієнтацію */
+  justify-content: center; /* Горизонтальне вирівнювання по центру */
+  align-items: center; /* Вертикальне вирівнювання по центру */
+  height: 100vh; /* Зробити висоту контейнера на 100% висоти сторінки */
+  color: #f6f4e6; /* Задаємо колір тексту */
+}
+
+.main-text {
+  font-size: 5em; /* Задаємо розмір тексту */
+}
+
+.sub-text {
+  font-size: 1.2em;
+  margin-top: 20px;
+  text-align: center;
+  word-spacing: normal;
 }
 
 
@@ -33,6 +53,7 @@ body {
   padding-right: 10px;
   -webkit-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
+  
 }
 
 .navMenu a:nth-child(2) {
@@ -55,5 +76,27 @@ body {
 .small-word-spacing {
   word-spacing: 0.2em;
   white-space: nowrap;
+}
+
+.button-wrapper {
+  text-align: center;
+  margin: -375px;
+}
+
+.button {
+  display: inline-block;
+  background-color: #fddb3a;
+  color: #272727;
+  padding: 12px 24px;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 4px;
+  transition: background-color 0.3s ease-in-out;
+  word-spacing: normal;
+
+}
+
+.button:hover {
+  background-color: #f5c500;
 }
 
