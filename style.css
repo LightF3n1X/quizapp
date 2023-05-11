@@ -4,8 +4,7 @@
   padding: 0;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
-  white-space: nowrap;
-  word-spacing: 100px;
+  white-space: 100px;
 }
 
 .center {
@@ -15,6 +14,16 @@
   align-items: center; /* Вертикальне вирівнювання по центру */
   height: 100vh; /* Зробити висоту контейнера на 100% висоти сторінки */
   color: #f6f4e6; /* Задаємо колір тексту */
+}
+
+.centerbg{
+  background-color: #f6f4e6;
+  height: 325px;
+  max-width: 325;
+  margin: 100px auto 0;
+  border-radius: 10px;
+  padding: 30px;
+  opacity: 5%;
 }
 
 .main-text {
@@ -39,6 +48,7 @@ body {
   top: 2%;
   left: 0%;
   text-align: left;
+  word-spacing: 100px;
 }
 
 .navMenu a {
@@ -53,7 +63,6 @@ body {
   padding-right: 10px;
   -webkit-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
-  
 }
 
 .navMenu a:nth-child(2) {
@@ -93,10 +102,105 @@ body {
   border-radius: 4px;
   transition: background-color 0.3s ease-in-out;
   word-spacing: normal;
-
 }
-
 .button:hover {
   background-color: #f5c500;
 }
 
+.app {
+  background-color: #f6f4e6;
+  width: 90%;
+  max-width: 600px;
+  margin: 250px auto 0;
+  border-radius: 10px;
+  padding: 30px;
+}
+
+.app h1{
+  font-size: 25px;
+  color: #f5c500;
+  text-shadow: 0 0 2px black;
+  font-weight: 600;
+  border-bottom: 1px solid #333;
+  padding-bottom: 30px;
+}
+
+.quiz{
+  padding: 8px 0;
+}
+
+.quiz h2{
+  font-size: 18px;
+  color: #001e00;
+  font-weight: 600;
+}
+
+.btn{
+  background:#f6f4e6;
+  color: rgb(1, 1, 8);
+  font-weight: 500;
+  width: 100%;
+  border: 1px solid #222;
+  padding: 10px;
+  margin: 10px 0;
+  text-align: left;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+.btn:hover{
+  background: #222;
+  color: #f5c500;
+}
+
+#next-btn{
+  background: #001e00;
+  color: #f5c500;
+  font-weight: 500;
+  width: 150px;
+  border: 0;
+  padding: 10px;
+  margin: 20px auto 0;
+  border-radius: 4px;
+  counter: pointer;
+  display: none;
+}
+
+.correct{
+  background: #9aeabc;
+}
+
+.incorrect{
+  background: #ff9393;
+}
+
+.about{
+  display: flex; 
+  flex-direction: column; 
+  justify-content: center; 
+  align-items: center; 
+  height: 100vh; 
+  color: #f6f4e6; 
+  text-align: center;
+  font-size: 30px;
+}
+
+.test1{
+  background-color: #f6f4e6;
+  width: 90%;
+  max-width: auto;
+  margin: 250px auto 0;
+  border-radius: 10px;
+  padding: 30px;
+  opacity: 20%;
+}
+
+.test2{
+  background-color: #f6f4e6;
+  width: 90%;
+  max-width: auto;
+  margin: 50px auto 0;
+  border-radius: 10px;
+  padding: 30px;
+  opacity: 20%;
+}
