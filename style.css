@@ -7,6 +7,12 @@
   white-space: 100px;
 }
 
+.bg{
+  background-image: url("https://cdn.discordapp.com/attachments/680323781738496000/1106183327322492988/bg.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+}
+
 .center {
   display: flex; /* Встановлюємо flex-контейнер */
   flex-direction: column; /* Задаємо колонкову орієнтацію */
@@ -14,17 +20,21 @@
   align-items: center; /* Вертикальне вирівнювання по центру */
   height: 100vh; /* Зробити висоту контейнера на 100% висоти сторінки */
   color: #f6f4e6; /* Задаємо колір тексту */
+  
 }
 
 .centerbg{
-  background-color: #f6f4e6;
+  background-color: #080808;
   height: 325px;
   max-width: 325;
   margin: 100px auto 0;
   border-radius: 10px;
   padding: 30px;
-  opacity: 5%;
+  opacity: 60%;
+  position: relative;
+  z-index: -1;
 }
+
 
 .main-text {
   font-size: 5em; /* Задаємо розмір тексту */
@@ -92,6 +102,11 @@ body {
   margin: -375px;
 }
 
+.test1-button {
+  text-align: center;
+  margin: 1px;
+}
+
 .button {
   display: inline-block;
   background-color: #fddb3a;
@@ -152,6 +167,11 @@ body {
   background: #222;
   color: #f5c500;
 }
+
+::-webkit-scrollbar {
+  display: none;
+}
+
 
 #next-btn{
   background: #001e00;
