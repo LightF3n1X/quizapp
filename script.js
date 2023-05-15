@@ -34,7 +34,7 @@ function startQuiz(){
 }
 
 function showQuestion(){
-    //resetState();
+    resetState();
     let currentQuestion = questions[currentQuestionIndex];
     let questionNo = currentQuestionIndex + 1;
     questionElement.innerHTML = questionNo + ". " + currentQuestion.question;
@@ -54,7 +54,7 @@ function showQuestion(){
 function resetState(){
     nextButton.style.display = "none";
     while(answerButtons.firstChild){
-        answerButtons.removeChild(answerButton.firstChild);
+        answerButtons.removeChild(answerButtons.firstChild);
     }
 }
 
@@ -62,10 +62,17 @@ function selectAnswer(e){
     const selectedBtn = e.target;
     const isCorrect = selected.dataset.correct === "true";
     if(isCorrect){
-        selectedBtn.classList.add("Correct")
+        selectedBtn.classList.add("correct")
     }else{
-        selectedBtn.classList.add("Incorrect")
+        selectedBtn.classList.add("incorrect")
     }
+    Array.from(answerButtons.children).forEach(button => {
+        if(button.dataset.correct === "true"){
+            button.classList.add("correct");
+        }
+        button.disabled = true;
+    });
+    nextButton.style.display = "block";
 }
 
 startQuiz();
