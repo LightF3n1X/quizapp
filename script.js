@@ -1,22 +1,67 @@
 const questions = [
     {
-        question: "Коли хтось переміг колись?",
+        question: "У якому році заснували Полтаву?",
         answers: [
-            {text: "1541", correct: true},
-            {text: "5645", correct: false},
-            {text: "3654", correct: false},
-            {text: "3158", correct: false},
+            {text: "899", correct: true},
+            {text: "988", correct: false},
+            {text: "1100", correct: false},
+            {text: "1023", correct: false},
         ]
     },
     {
-        question: "де хто переміг?",
+        question: "Що зображено на гербі міста?",
         answers: [
-            {text: "Дома", correct: true},
-            {text: "He дома", correct: false},
-            {text: "He їбу", correct: false},
-            {text: "Там", correct: false},
+            {text: "Щит і меч", correct: false},
+            {text: "Лук і чотири зірки", correct: true},
+            {text: "Козак з шаблею", correct: false},
+            {text: "Галушки", correct: false},
         ]
-    }
+    },
+    {
+        question: "Як називається гора, на якій стоїть Біла альтанка?",
+        answers: [
+            {text: "Степанова гора", correct: false},
+            {text: "Шведська могила", correct: false},
+            {text: "Говерла", correct: false},
+            {text: "Іванова гора", correct: true},
+        ]
+    },
+    {
+        question: "Де за давніми переказами страчували злочинців?",
+        answers: [
+            {text: "У Сонячному парку", correct: false},
+            {text: "На театральній площі", correct: false},
+            {text: "У корпусному парку", correct: false},
+            {text: "На площі перед альтанкою", correct: true},
+        ]
+    },
+    {
+        question: "Який архітектор відбудував Полтаву після Другої світової війни?",
+        answers: [
+            {text: "Василь Кричевський", correct: false},
+            {text: "Лев Вайнгорт", correct: true},
+            {text: "Василь Кричевський", correct: false},
+            {text: "Іван Котляровський", correct: false},
+        ]
+    },
+    {
+        question: "Існує легенда, що бруківка на вулиці Собороності зроблена з:",
+        answers: [
+            {text: "Фундаменту старої кам'яної церкви", correct: false},
+            {text: "Козацьких могил", correct: false},
+            {text: "Європейських надгробків", correct: true},
+            {text: "Гранітної стелі", correct: false},
+        ]
+    },
+    {
+        question: "Коли була знайдена перша писемна згадка про Полтаву?",
+        answers: [
+            {text: "1174", correct: true},
+            {text: "1154", correct: false},
+            {text: "1203", correct: false},
+            {text: "1214", correct: false},
+        ]
+    },
 ];
 
 const questionElement = document.getElementById("question");
@@ -60,9 +105,10 @@ function resetState(){
 
 function selectAnswer(e){
     const selectedBtn = e.target;
-    const isCorrect = selected.dataset.correct === "true";
+    const isCorrect = selectedBtn.dataset.correct === "true";
     if(isCorrect){
         selectedBtn.classList.add("correct")
+        score++;
     }else{
         selectedBtn.classList.add("incorrect")
     }
@@ -74,5 +120,30 @@ function selectAnswer(e){
     });
     nextButton.style.display = "block";
 }
+
+function showScore() {
+    resetState();
+    questionElement.innerHTML = `Ви відповіли правильно на ${score} з ${questions.length} запитань!`;
+    nextButton.innerHTML = "Почати спочатку";
+    nextButton.style.display = "block";
+}
+
+
+function handleNextButton(){
+    currentQuestionIndex++;
+    if(currentQuestionIndex < questions.length){
+        showQuestion();
+    }else{
+        showScore();
+    }
+}
+
+nextButton.addEventListener("click", ()=>{
+    if(currentQuestionIndex < questions.length){
+        handleNextButton();
+    }else{
+        startQuiz();
+    }
+});
 
 startQuiz();

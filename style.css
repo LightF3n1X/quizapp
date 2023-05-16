@@ -163,11 +163,13 @@ body {
   cursor: pointer;
   transition: all 0.3s;
 }
-.btn:hover{
+.btn:hover:not([disabled]){
   background: #222;
   color: #f5c500;
 }
-
+.btn:disabled{
+  cursor: no-drop;
+}
 ::-webkit-scrollbar {
   display: none;
 }
