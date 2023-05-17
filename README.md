@@ -11,5 +11,5 @@
 1. Посилання на сайт:
 
    ```bash
-   https://lightf3n1x.github.io/quizapp/index.html'''
+   https://lightf3n1x.github.io/quizapp/index.html
  
