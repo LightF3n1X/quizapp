@@ -1,3 +1,6 @@
+/*
+Божий захист на цей код, щоб все працювало при представленні, нічого не з'їхало.
+*/
 const questions = [
     {
         question: "У якому році заснували Полтаву?",
@@ -124,9 +127,14 @@ function selectAnswer(e){
 function showScore() {
     resetState();
     questionElement.innerHTML = `Ви відповіли правильно на ${score} з ${questions.length} запитань!`;
-    nextButton.innerHTML = "Почати спочатку";
+    nextButton.innerHTML = "Перейти на головну сторінку";
     nextButton.style.display = "block";
+    nextButton.addEventListener("click", () => {
+        window.location.href = "tests.html";
+    });
+    
 }
+
 
 
 function handleNextButton(){

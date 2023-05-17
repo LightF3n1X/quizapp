@@ -1,4 +1,6 @@
-
+/*
+Божий захист на цей код, щоб все працювало при представленні, нічого не з'їхало.
+*/
 * {
   margin: 0;
   padding: 0;
@@ -101,12 +103,6 @@ body {
   text-align: center;
   margin: -375px;
 }
-
-.test1-button {
-  text-align: center;
-  margin: 1px;
-}
-
 .button {
   display: inline-block;
   background-color: #fddb3a;
@@ -207,22 +203,60 @@ body {
   font-size: 30px;
 }
 
-.test1{
+.test1 {
   background-color: #f6f4e6;
   width: 90%;
   max-width: auto;
   margin: 250px auto 0;
   border-radius: 10px;
   padding: 30px;
-  opacity: 20%;
+  position: relative;
+  z-index: -1;
+  opacity: 100%;
 }
 
-.test2{
+.test1 {
   background-color: #f6f4e6;
   width: 90%;
   max-width: auto;
-  margin: 50px auto 0;
+  margin: 250px auto 0;
   border-radius: 10px;
   padding: 30px;
-  opacity: 20%;
+  position: relative;
+  z-index: -1;
+  opacity: 100%;
+}
+
+.test1 h1,
+.test1 p {
+  color: #000000;
+  text-align: center;
+  position: absolute;
+  left: 56%;
+  font-size: 45px;
+}
+.test1 h2 {
+  position: absolute;
+  color: #000;
+  top: 15%;
+  left: 44%;
+}
+.test1-button {
+  display: inline-block;
+  background-color: #fddb3a;
+  color: #272727;
+  padding: 12px 410px;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 4px;
+  transition: background-color 0.3s ease-in-out;
+  word-spacing: normal;
+  z-index: 2;
+  position: absolute;
+  top: 98%;
+}
+
+.test1 img {
+  position: relative;
+  z-index: -1;
 }
