@@ -8,7 +8,8 @@
 
 ## Використання
 
-1. Клонуйте репозиторій:
+1. Посилання на сайт:
 
    ```bash
-   git clone https://github.com/your-username/your-repository.git
+   https://lightf3n1x.github.io/quizapp/index.html'''
+ 
